@@ -455,6 +455,8 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String & Schema.Attribute.Required;
     price: Schema.Attribute.Decimal & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    screenSize: Schema.Attribute.Enumeration<['Fourteen inch', 'Sixteen inch']>;
+    shoeSize: Schema.Attribute.Enumeration<['seven', 'eight', 'nine', 'ten']>;
     sizes: Schema.Attribute.Enumeration<['SM', 'MD', 'LG', 'XL', 'XXL']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
